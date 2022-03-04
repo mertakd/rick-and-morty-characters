@@ -7,8 +7,10 @@ import retrofit2.http.Path
 
 interface RickAndMortyService {
 
-    @GET("character/{character-id}")
+    @GET("character/{character-id}") //character id nin olduğu yere yani kıvırcık paranteze placeholder deniliyor.
     suspend fun getCharacterById(
         @Path("character-id") characterId: Int
     ): Response<GetCharacterByIdResponse>
+
+
 }
