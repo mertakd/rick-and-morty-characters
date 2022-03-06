@@ -9,4 +9,16 @@ class ApiClient (private val rickAndMortyService: RickAndMortyService){
     suspend fun getChracterById(characterId: Int):Response<GetCharacterByIdResponse> {
         return rickAndMortyService.getCharacterById(characterId)
     }
+
+    /*
+    *burdaki fonksiyon interface deki  çağrıyı(call) yapan interface i taklit ediyor.
+     */
+
+    private inline fun <T> safeApiCall(apiCall: () -> Response<T>): SimpleResponse<T> {
+        return try {
+            SimpleResponse.success(apiCall.invoke())
+        } catch (e: Exception) {
+            SimpleResponse.failure(e)
+        }
+    }
 }

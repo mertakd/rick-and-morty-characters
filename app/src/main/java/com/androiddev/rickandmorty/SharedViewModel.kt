@@ -12,7 +12,7 @@ class SharedViewModel : ViewModel() {
     private val repository = SharedRepository()
 
     private val _characterByIdLiveData = MutableLiveData<GetCharacterByIdResponse>()
-    val characterByIdLiveData: LiveData<GetCharacterByIdResponse> = _characterByIdLiveData
+    val characterByIdLiveData: LiveData<GetCharacterByIdResponse?> = _characterByIdLiveData
 
 
     fun refreshCharacter(characterId: Int){

@@ -4,7 +4,7 @@ import com.androiddev.rickandmorty.response.GetCharacterByIdResponse
 
 class SharedRepository {
     /*
-    *Burası api ile etkileşime gireceğimiz yerdir.
+    *Burası yani repository api ile etkileşime gireceğimiz yerdir.
      */
 
     suspend fun getCharacterById(characterId: Int): GetCharacterByIdResponse? {
@@ -12,7 +12,7 @@ class SharedRepository {
         val request = NetworkLayer.apiClient.getChracterById(characterId)
 
 
-        //ağ isteğinden döndükden sonra ne olacak. isteğin başarı olup olmadığı durumlarda işlem yapabiliriz.
+        //ağ isteğinden(network request) döndükden sonra ne olacak. isteğin başarı olup olmadığı durumlarda işlem yapabiliriz.
         if (request.isSuccessful){
             return request.body()!!
         }
