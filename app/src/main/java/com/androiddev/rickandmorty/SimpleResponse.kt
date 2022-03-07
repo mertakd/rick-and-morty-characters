@@ -31,6 +31,11 @@ data class SimpleResponse<T>(
         object Failure : Status()
     }
 
+    /*
+    sealed farkına bak
+     */
+
+
 
 
 
