@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.androiddev.rickandmorty.response.GetCharacterByIdResponse
+import com.androiddev.rickandmorty.network.response.GetCharacterByIdResponse
 import kotlinx.coroutines.launch
 
 class SharedViewModel : ViewModel() {

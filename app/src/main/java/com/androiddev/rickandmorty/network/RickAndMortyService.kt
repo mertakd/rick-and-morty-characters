@@ -1,6 +1,6 @@
-package com.androiddev.rickandmorty
+package com.androiddev.rickandmorty.network
 
-import com.androiddev.rickandmorty.response.GetCharacterByIdResponse
+import com.androiddev.rickandmorty.network.response.GetCharacterByIdResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

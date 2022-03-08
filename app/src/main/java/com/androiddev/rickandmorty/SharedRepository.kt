@@ -1,6 +1,7 @@
 package com.androiddev.rickandmorty
 
-import com.androiddev.rickandmorty.response.GetCharacterByIdResponse
+import com.androiddev.rickandmorty.network.NetworkLayer
+import com.androiddev.rickandmorty.network.response.GetCharacterByIdResponse
 
 class SharedRepository {
     /*
@@ -11,6 +12,12 @@ class SharedRepository {
         //network isteği gerçekleştiriyoruz.
         val request = NetworkLayer.apiClient.getChracterById(characterId)
 
+
+        /*if (request.){
+            return null
+        }
+
+         */
 
         //ağ isteğinden(network request) döndükden sonra ne olacak. isteğin başarı olup olmadığı durumlarda işlem yapabiliriz.
         if (request.isSuccessful){

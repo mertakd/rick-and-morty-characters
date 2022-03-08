@@ -1,4 +1,4 @@
-package com.androiddev.rickandmorty
+package com.androiddev.rickandmorty.network
 
 import retrofit2.Response
 
@@ -32,7 +32,7 @@ data class SimpleResponse<T>(
     }
 
     /*
-    sealed farkına bak
+    sealed farkına bak 
      */
 
 
