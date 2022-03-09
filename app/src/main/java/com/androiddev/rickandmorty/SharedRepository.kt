@@ -10,18 +10,17 @@ class SharedRepository {
 
     suspend fun getCharacterById(characterId: Int): GetCharacterByIdResponse? {
         //network isteği gerçekleştiriyoruz.
-        val request = NetworkLayer.apiClient.getChracterById(characterId)
+        val request = NetworkLayer.apiClient.getCharacterById(characterId)
 
 
-        /*if (request.){
+        if (request.failed){
             return null
         }
 
-         */
 
         //ağ isteğinden(network request) döndükden sonra ne olacak. isteğin başarı olup olmadığı durumlarda işlem yapabiliriz.
-        if (request.isSuccessful){
-            return request.body()!!
+        if (!request.isSuccessful){
+            return null
         }
 
         return null //başarısızlık durumunda null döndür

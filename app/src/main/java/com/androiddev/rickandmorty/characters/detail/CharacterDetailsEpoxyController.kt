@@ -1,6 +1,7 @@
 package com.androiddev.rickandmorty.characters.detail
 
 import com.airbnb.epoxy.EpoxyController
+import com.androiddev.rickandmorty.network.response.GetCharacterByIdResponse
 
 class CharacterDetailsEpoxyController : EpoxyController() {
 
@@ -14,8 +15,28 @@ class CharacterDetailsEpoxyController : EpoxyController() {
         }
 
 
+    var characterResponse: GetCharacterByIdResponse? = null
+        set(value) {
+            field = value
+            if (field != null){
+                isLoading = false
+                requestModelBuild()
+            }
+        }
+
     override fun buildModels() {
-        TODO("Not yet implemented")
+        //kullanıcı arayüzü(ui) güncellenmesi gerektiğinde yapılacak işlemler
+        //arayüzün neye benzediğini kontrol edebiliriz burada
+        if(isLoading){
+            //loading durumunu göster
+            return
+        }
+
+        //add header model
+        //add image model
+        //add the data points model
+
+
     }
 
 
