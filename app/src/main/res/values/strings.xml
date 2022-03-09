@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">RickAndMorty</string>
+
+
+    <item name="epoxy_viewbinding" type="id" />
+
 </resources>
