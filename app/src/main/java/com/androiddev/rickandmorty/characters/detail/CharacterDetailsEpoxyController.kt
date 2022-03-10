@@ -94,7 +94,7 @@ class CharacterDetailsEpoxyController : EpoxyController() {
     //internet gelen verileri kendi view larımıza bind ediyor yani bağlıyoruz
     data class ImageEpoxyModel(
         val imageUrl: String,
-    ): ViewBindingKotlinModel<ModelCharacterDetailsImageBinding>(R.layout.model_character_details_data_point) {
+    ): ViewBindingKotlinModel<ModelCharacterDetailsImageBinding>(R.layout.model_character_details_image) {
 
         override fun ModelCharacterDetailsImageBinding.bind() {
             Picasso.get().load(imageUrl).into(headerImageView)

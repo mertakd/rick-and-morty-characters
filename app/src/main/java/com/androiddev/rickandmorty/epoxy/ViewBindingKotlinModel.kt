@@ -9,6 +9,10 @@ import java.lang.reflect.Method
 import java.lang.reflect.ParameterizedType
 import java.util.concurrent.ConcurrentHashMap
 
+
+/*
+*epoxy ve controller da burayı kullanacağız
+ */
 abstract class ViewBindingKotlinModel<T : ViewBinding>(
     @LayoutRes private val layoutRes: Int
 ) : EpoxyModel<View>() {

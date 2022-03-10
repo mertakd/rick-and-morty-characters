@@ -7,7 +7,7 @@ class LoadingEpoxyModel : ViewBindingKotlinModel<ModelLoadingBinding>(R.layout.m
 
 
     override fun ModelLoadingBinding.bind() {
-        TODO("Not yet implemented")
+
     }
 
 
