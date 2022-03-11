@@ -1,7 +1,6 @@
-package com.androiddev.rickandmorty.characters.detail
+package com.androiddev.rickandmorty
 
 import com.airbnb.epoxy.EpoxyController
-import com.androiddev.rickandmorty.R
 import com.androiddev.rickandmorty.databinding.ModelCharacterDetailsDataPointBinding
 import com.androiddev.rickandmorty.databinding.ModelCharacterDetailsHeaderBinding
 import com.androiddev.rickandmorty.databinding.ModelCharacterDetailsImageBinding
